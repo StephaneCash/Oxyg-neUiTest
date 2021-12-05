@@ -1,15 +1,18 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'select-model',
   templateUrl: './select-model.component.html',
-  styleUrls: ['./select-model.component.css']
+  styleUrls: ['./select-model.component.css'],
 })
 export class SelectModelComponent implements OnInit {
 
-  constructor() { }
+  @Input() id: string;
+  @Input() data: [4, 7, 9, 6];
+  @Input() width = '250px';
+  @Input() height = '40px';
 
-  ngOnInit(): void {
-  }
+  constructor() {}
 
+  ngOnInit(): void {}
 }

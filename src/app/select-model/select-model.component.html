@@ -1,1 +1,10 @@
-<p>select-model works!</p>
+<div>
+  <select
+    class="form-control select-options"
+    [ngStyle]="{ width: width, height: height }"
+    [id]="id"
+  >
+    <option [selected]>----</option>
+    <option *ngFor="let val of data" [value]="val.id"></option>
+  </select>
+</div>
