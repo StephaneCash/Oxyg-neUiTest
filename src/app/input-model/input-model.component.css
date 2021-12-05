@@ -1,0 +1,16 @@
+@import "../../../node_modules/bootstrap/dist/css/bootstrap.min.css";
+
+.inputGeneric::-webkit-input-placeholder {
+  font-style: italic;
+}
+.inputGeneric {
+  border: 2px solid silver;
+}
+.inputGeneric:focus{
+  border-color: none;
+}
+
+.form-control:focus{
+  border-color: silver;
+  box-shadow: none;
+}
