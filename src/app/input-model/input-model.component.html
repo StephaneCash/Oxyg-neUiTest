@@ -1,11 +1,25 @@
-<div>
+<div *ngIf="!isForm">
   <input
     [type]="type"
-    class="form-control inputGeneric"
+    class="form-control input-model"
     [id]="id"
     [placeholder]="placeholder"
-    [ngStyle]="{'width':width, 'height':height}"
+    [ngStyle]="{ width: width, height: height }"
     [disabled]="disabled"
     [value]="value"
   />
+</div>
+
+<div *ngIf="isForm">
+  <duv [formGroup]="formGroup">
+    <input
+      [type]="type"
+      class="form-control input-model"
+      [id]="id"
+      [placeholder]="placeholder"
+      [ngStyle]="{ width: width, height: height }"
+      [disabled]="disabled"
+      [value]="value"
+    />
+  </duv>
 </div>

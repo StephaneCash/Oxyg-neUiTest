@@ -6,10 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+
   donnee = {
     id: 2,
     id2 : 5,
     id7 : 6
   }
+
+  inputId="id"
 
 }

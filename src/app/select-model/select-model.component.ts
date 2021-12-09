@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import {FormGroup} from '@angular/forms';
 
 @Component({
   selector: 'select-model',
@@ -8,9 +9,11 @@ import { Component, OnInit, Input } from '@angular/core';
 export class SelectModelComponent implements OnInit {
 
   @Input() id: string;
-  @Input() data: [4, 7, 9, 6];
+  @Input() data: [{key:1,value:"Moi"}];
   @Input() width = '250px';
   @Input() height = '40px';
+  @Input() isForm:false;
+  @Input() formGroup = FormGroup;
 
   constructor() {}
 

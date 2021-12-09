@@ -1,10 +1,23 @@
-<div>
+<div *ngIf="!isForm">
   <select
-    class="form-control select-options"
+    class="form-control select-option"
     [ngStyle]="{ width: width, height: height }"
     [id]="id"
   >
     <option [selected]>----</option>
     <option *ngFor="let val of data" [value]="val.id"></option>
   </select>
+</div>
+
+<div *ngIf="isForm">
+  <div [formGroup]="formGroup">
+    <select
+      class="form-control select-option"
+      [ngStyle]="{ width: width, height: height }"
+      [id]="id"
+    >
+      <option [selected]>----</option>
+      <option *ngFor="let val of data" [value]="val.id"></option>
+    </select>
+  </div>
 </div>
